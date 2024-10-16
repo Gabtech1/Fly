@@ -1,0 +1,111 @@
+.card {
+    width: 350px;
+    position: relative;
+    perspective: 1000px;
+  }
+  
+  .img{
+    height: auto;
+    max-width: 100%;
+    border-radius: 5px 5px 0 0;
+    display: block;
+  }
+  
+  .front{
+    text-align: center;
+    background-color: #fff;
+    border-radius: 5px;
+    position: relative;
+    z-index: 10;
+    opacity: 0.9;
+    transition: all 0.6s;
+  }
+  
+  .active.front {
+    transform: translateZ(-30px) translateX(30px);
+    box-shadow: 0 2rem 4rem #777;
+    opacity: 0.5;
+    z-index: 0;
+  }
+  
+  .name {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    color: #fff;
+    text-shadow: 0 0 1rem #fff;
+    background-color: rgba(0, 0, 0, .8);
+  }
+  
+  .list {
+    width: 80%;
+    margin: auto;
+    padding: 1rem 0;
+  }
+  
+  .item {
+    font-size: 1.2rem;
+    color: #777;
+    margin: 1rem 0;
+    border-bottom: 0.1rem solid #2b81e4;
+    padding-bottom: 1rem;
+  }
+  
+  .back {
+    position: absolute;
+    top: 0;
+    background-color: #2b81e4;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    box-shadow: 0 2rem 2rem #777;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transform: translateZ(-30px) translateX(30px);
+    opacity: 0.5;
+    transition: all .6s;
+  }
+  
+  .active.back{
+    transform: translateZ(0) translateX(0);
+    box-shadow: 0 0.5rem 2rem #aaa;
+    opacity: 0.9;
+  }
+  
+  .price {
+    font-size: 2.5rem;
+    font-weight: lighter;
+    color: #fff;
+    margin-bottom: 50px;
+  }
+  
+  .link {
+    color: #2b81e4;
+    background-color: #fff;
+    border: none;
+    font-size: 1.5rem;
+    padding: 10px 30px;
+    border-radius: 5rem;
+    cursor: pointer;
+    letter-spacing: 0.1rem;
+  }
+  
+  .btn {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    padding: 5px;
+    background-color: #eee;
+    color: #777;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+  }
