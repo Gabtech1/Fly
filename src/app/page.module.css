@@ -221,6 +221,10 @@
 }
 
 @media (max-width: 600px){ 
+  .container{
+    margin: 0;
+  }
+
   .home{
     background: linear-gradient(rgba(1, 9, 20, 0.5), rgba(18, 113, 255, 0.3)), url('../../public/mobile.webp') center no-repeat;
     background-size: cover;
