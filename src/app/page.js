@@ -1,18 +1,23 @@
 import styles from "./page.module.css";
 import Image from "next/image";
 import Link from "next/link";
-import Fly from '../../public/fly.png';
+import Fly from '../../public/fly.avif';
+import Ice from '../../public/ice.webp'
+import Beach from '../../public/beach.webp'
+import Grind from '../../public/grind.webp'
 import Cards from "@/components/Cards";
-import Ice from '../../public/ice.jpg'
+import Reviews from "@/components/Reviews";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
-    <main className={styles.container}>
+    <div className={styles.container}>
+      {/* Home section */}
       <section className={styles.home}>
         <div className={styles.home_text}>
           <h1>sinta a adrenalina</h1>
           <p>cada salto é uma nova história </p>
-          <Link href='/' className={styles.arrow}>↓</Link>
+          <Link href='#tours' className={styles.arrow}>↓</Link>
         </div>
         <Image src={Fly} alt="parachute" className={styles.fly} />
         <div className={styles.logo}>
@@ -24,14 +29,20 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Tours section */}
       <section className={styles.tours} id='tours'>
         <h3 className={styles.title}>Explore os melhores horizontes</h3>
         <div className={styles.wrapper}>
-          <Cards src={Ice} name={'Montanhas da Islândia'} days={'Tour de 7 dias'} people={'Até 20 pessoas'} guides={'5 Guias'} comfort={'Tendas privadas no acampamento'} level={'Dificuldade: Difícil'} price={'R$2.999,00'}/>
-          <Cards src={Ice} name={'Montanhas da Islândia'} days={'Tour de 7 dias'} people={'Até 20 pessoas'} guides={'5 Guias'} comfort={'Tendas privadas no acampamento'} level={'Dificuldade: Difícil'}/>
-          <Cards src={Ice} name={'Montanhas da Islândia'} days={'Tour de 7 dias'} people={'Até 20 pessoas'} guides={'5 Guias'} comfort={'Tendas privadas no acampamento'} level={'Dificuldade: Difícil'}/>
+          {/* Cards components with props */}
+          <Cards src={Ice} name={'Mt. Esja - Islândia'} days={'Tour de 7 dias'} people={'Até 20 pessoas'} guides={'8 Guias'} comfort={'Hotel'} level={'Dificuldade: Difícil'} price={'R$11.999,00'} />
+          <Cards src={Grind} name={'Grindelwald - Suíça'} days={'Tour de 9 dias'} people={'Até 30 pessoas'} guides={'7 Guias'} comfort={'Tendas privadas no acampamento'} level={'Dificuldade: Média'} price={'R$8.999,00'} />
+          <Cards src={Beach} name={'Ilha do Campeche - Brasil'} days={'Tour de 5 dias'} people={'Até 25 pessoas'} guides={'5 Guias'} comfort={'Tendas privadas no acampamento'} level={'Dificuldade: Fácil'} price={'R$4.999,00'} />
         </div>
       </section>
-    </main>
+
+      {/* Reviews and footer components */}
+      <Reviews />
+      <Footer />
+    </div>
   );
 }

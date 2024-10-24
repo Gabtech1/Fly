@@ -1,0 +1,132 @@
+.reviews {
+    padding: 10rem 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../../../public/bg.webp') center no-repeat;
+    background-size: cover;
+  }
+  
+  .stories {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .story_bg {
+    background-color: rgba(238, 238, 238, 0.85);
+    padding: 2rem 5rem;
+    margin: 5rem;
+    width: 70%;
+    box-shadow: 0 2rem 5rem rgba(51, 51, 51, 0.4);
+    transform: skewX(20deg);
+  }
+  
+  .story {
+    transform: skewX(-20deg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  .img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+  
+  .text {
+    letter-spacing: 0.1rem;
+  }
+  
+  .story h3 {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .story p {
+    text-align: center;
+    font-size: 1.3rem;
+    color: #777;
+  }
+  
+  .story p::first-letter {
+    margin-left: 1rem;
+  }
+
+  /* Responsive media queries */
+  @media (max-width: 1200px){
+    .story_bg {
+      transform: skewX(10deg);
+      padding: 1rem 3rem;
+      margin: 1rem;
+      width: 90%;
+    }
+    
+    .story {
+      transform: skewX(-10deg);
+    }
+
+    .story h3 {
+      font-size: 1.1rem;
+    }
+    
+    .story p {
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 900px){
+    .story_bg {
+      transform: skewX(5deg);
+    }
+    
+    .story {
+      transform: skewX(-5deg);
+    }
+
+    .story h3 {
+      font-size: 0.8rem;
+    }
+    
+    .story p {
+      font-size: 0.7rem;
+      line-height: 1.2rem;
+    }
+  }
+
+  @media (max-width: 600px){
+    .reviews {
+      background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../../../public/mobile2.webp') center left no-repeat;
+      background-size: cover;
+    }
+
+    .story_bg {
+      transform: skewX(0deg);
+      border-radius: 4px;
+      padding: 2rem;
+    }
+    
+    .story {
+      transform: skewX(0deg);
+      flex-direction: column;
+    }
+
+    .story h3 {
+      font-size: 0.8rem;
+    }
+    
+    .story p {
+      font-size: 0.7rem;
+      line-height: 1.2rem;
+    }
+
+    .img{
+      width: 150px;
+    height: 150px;
+    }
+  }

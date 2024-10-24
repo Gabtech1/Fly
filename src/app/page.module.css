@@ -1,17 +1,18 @@
 .container {
   background-color: #eee;
-  margin: 2.5rem;
+  margin: 2rem;
   box-shadow: 0 1rem 3rem #555;
   overflow: hidden;
 }
 
+/* Home styles */
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 90vh;
-  background: linear-gradient(rgba(1, 9, 20, 0.5), rgba(18, 113, 255, 0.3)), url('../../public/flies.jpg') center no-repeat;
+  background: linear-gradient(rgba(1, 9, 20, 0.5), rgba(18, 113, 255, 0.3)), url('../../public/flies.webp') center no-repeat;
   background-size: cover;
   position: relative;
   perspective: 50rem;
@@ -29,6 +30,7 @@
   text-shadow: 0 0.3rem 0.5rem #555;
   gap: 25px;
   width: 100%;
+  padding: 5px 20px;
 }
 
 .home_text h1 {
@@ -49,54 +51,8 @@
   animation: shake 1.5s infinite ease-in-out;
 }
 
-@keyframes shake {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(5px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-
 .fly {
   animation: float ease-in-out 35s infinite;
-}
-
-@keyframes float {
-  0% {
-    transform: translateZ(20rem);
-    opacity: 1;
-  }
-
-  30% {
-    transform: translateZ(-350rem) translateX(75rem);
-    opacity: 0.8;
-  }
-
-  50% {
-    transform: translateZ(-500rem) translateX(175rem);
-    opacity: 0.8;
-  }
-
-  70% {
-    transform: translateZ(-750rem) translateX(600rem);
-    opacity: 0.6;
-  }
-
-  80% {
-    transform: translateZ(-25rem) translateX(60rem);
-    opacity: 0.8;
-  }
-
-  100% {
-    transform: translateZ(20rem);
-    opacity: 1;
-  }
 }
 
 .logo {
@@ -134,6 +90,54 @@
   animation: drop-letters 4s 0.3s infinite;
 }
 
+
+/* keyframes animations */
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateZ(20rem);
+    opacity: 1;
+  }
+
+  30% {
+    transform: translateZ(-350rem) translateX(75rem);
+    opacity: 0.8;
+  }
+
+  50% {
+    transform: translateZ(-500rem) translateX(175rem);
+    opacity: 0.8;
+  }
+
+  70% {
+    transform: translateZ(-750rem) translateX(600rem);
+    opacity: 0.6;
+  }
+
+  80% {
+    transform: translateZ(-25rem) translateX(60rem);
+    opacity: 0.8;
+  }
+
+  100% {
+    transform: translateZ(20rem);
+    opacity: 1;
+  }
+}
+
 @keyframes drop-letters {
   0% {
     transform: translateY(0);
@@ -156,6 +160,7 @@
   }
 }
 
+/* Tours styles */
 .tours {
   padding: 120px 0;
   display: flex;
@@ -173,7 +178,132 @@
 }
 
 .wrapper{
+  width: 100%;
   display: flex;
-  justify-content: space-around;
-  gap: 80px;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  padding: 5px 20px;
+}
+
+/* Responsive media queries */
+@media (max-width: 1200px){
+  .home_text h1 {
+    font-size: 3rem;
+  }
+  
+  .home_text p {
+    font-size: 1.3rem;
+  }
+
+  .title {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 900px){
+  .home{
+    flex-direction: column;
+  }
+  
+  .fly{
+    position: absolute;
+  }
+  
+  .arrow{
+    font-size: 2rem;
+  }
+
+  .title {
+    font-size: 2.4rem;
+    max-width: 20ch;
+  }
+}
+
+@media (max-width: 600px){ 
+  .home{
+    background: linear-gradient(rgba(1, 9, 20, 0.5), rgba(18, 113, 255, 0.3)), url('../../public/mobile.webp') center no-repeat;
+    background-size: cover;
+  }
+
+  .arrow{
+    font-size: 1.5rem;
+  }
+
+  .home_text h1 {
+    font-size: 1.6rem;
+  }
+  
+  .home_text p {
+    font-size: 0.9rem;
+  }
+
+  .logo{
+    top: 1rem;
+    right: calc((100vw - 50%) - 150px);
+  }
+
+  .logo h2 span {
+    font-size: 1.2rem;
+    width: 30px;
+    height: 30px;
+  }
+
+  @keyframes drop-letters {
+    0% {
+      transform: translateY(0);
+    }
+  
+    10% {
+      transform: translateY(0);
+    }
+  
+    15% {
+      transform: translateY(-50%);
+    }
+  
+    20% {
+      transform: translateY(0);
+    }
+  
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes float {
+    0% {
+      transform: translateZ(20rem);
+      opacity: 1;
+    }
+  
+    30% {
+      transform: translateZ(-350rem) translateX(75rem);
+      opacity: 0.8;
+    }
+  
+    50% {
+      transform: translateZ(-500rem) translateX(-75rem);
+      opacity: 0.8;
+    }
+  
+    70% {
+      transform: translateZ(-450rem) translateX(-90rem);
+      opacity: 0.6;
+    }
+  
+    80% {
+      transform: translateZ(-25rem) translateX(20rem);
+      opacity: 0.8;
+    }
+  
+    100% {
+      transform: translateZ(20rem);
+      opacity: 1;
+    }
+  }
+
+  .title {
+    font-size: 1.6rem;
+  }
 }
