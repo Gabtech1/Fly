@@ -228,10 +228,15 @@
   .home{
     background: linear-gradient(rgba(1, 9, 20, 0.5), rgba(18, 113, 255, 0.3)), url('../../public/mobile.webp') center no-repeat;
     background-size: cover;
+    border-radius: 0;
   }
 
   .arrow{
     font-size: 1.5rem;
+  }
+
+  .home_text{
+    margin-top: -100px;
   }
 
   .home_text h1 {
@@ -251,6 +256,12 @@
     font-size: 1.2rem;
     width: 30px;
     height: 30px;
+  }
+
+  .fly{
+    height: auto;
+    display: block;
+    max-width: 150px;
   }
 
   @keyframes drop-letters {
